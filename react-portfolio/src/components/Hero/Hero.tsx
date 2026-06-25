@@ -36,7 +36,7 @@ function Hero() {
       {/* RIGHT SIDE */}
       <div className="flex flex-1 justify-end">
         <div
-          className="w-full max-w-2xl rounded-[32px] border border-gray-800 bg-gradient-to-br from-zinc-900 to-black shadow-2xl "
+          className="w-full max-w-2xl rounded-[32px] border border-gray-800 bg-gradient-to-br from-zinc-900 to-black shadow-2xl"
           style={{ padding: "20px" }}
         >
           {/* Terminal Header */}
