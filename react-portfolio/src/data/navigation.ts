@@ -1,1 +1,6 @@
-export const navigationLinks = ["Home", "About", "Projects", "Contact"];
+export const navigationLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];

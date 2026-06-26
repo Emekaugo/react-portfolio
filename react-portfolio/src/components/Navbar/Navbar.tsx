@@ -11,10 +11,10 @@ function Navbar() {
         <ul className="flex gap-8 text-sm font-medium text-gray-300">
           {navigationLinks.map((link) => (
             <li
-              key={link}
+              key={link.name}
               className="cursor-pointer transition-colors hover:text-white"
             >
-              {link}
+              <a href={link.href}>{link.name}</a>
             </li>
           ))}
         </ul>
