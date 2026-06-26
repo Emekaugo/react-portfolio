@@ -1,83 +1,92 @@
+import { education, experience, skills } from "../../data/portfolio";
+
 function About() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-8 py-24">
+      {/* Heading */}
       <div className="mb-16">
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-green-400">
+        <p className="mb-3 text-sm uppercase tracking-[0.3em] text-green-400">
           About
         </p>
 
-        <h2 className="mb-6 text-4xl font-bold text-white">Get to know me</h2>
+        <h2 className="mb-6 text-4xl font-bold text-white">Get to Know Me</h2>
 
-        <p className="max-w-3xl text-lg leading-relaxed text-gray-400">
-          I am a Software Engineer with experience building scalable web
-          applications and delivering solutions that improve user experience and
-          business operations. I enjoy creating modern, responsive, and
-          maintainable software using contemporary web technologies.
+        <p className="max-w-3xl text-lg leading-8 text-gray-400">
+          Software Engineer with experience building scalable web applications
+          and business solutions. Passionate about creating responsive,
+          maintainable, and user-focused applications using modern technologies.
         </p>
       </div>
 
+      {/* Experience + Education */}
       <div className="grid gap-8 lg:grid-cols-2">
+        {/* Experience */}
         <div className="rounded-3xl border border-gray-800 p-8">
-          <h3 className="mb-6 text-2xl font-semibold text-white">Education</h3>
+          <h3 className="mb-8 text-2xl font-semibold text-white">Experience</h3>
+
+          <div className="space-y-8">
+            {experience.map((job) => (
+              <div key={job.company}>
+                <h4 className="font-semibold text-white">{job.role}</h4>
+
+                <p className="text-green-400">{job.company}</p>
+
+                <p className="text-sm text-gray-500">{job.duration}</p>
+
+                <p className="mt-3 text-gray-400">{job.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education */}
+        <div className="rounded-3xl border border-gray-800 p-8">
+          <h3 className="mb-8 text-2xl font-semibold text-white">Education</h3>
+
+          <h4 className="font-semibold text-white">{education.degree}</h4>
+
+          <p className="text-green-400">{education.school}</p>
+
+          <p className="mt-2 text-gray-400">CGPA: {education.cgpa}</p>
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div className="mt-8 rounded-3xl border border-gray-800 p-8">
+        <h3 className="mb-8 text-2xl font-semibold text-white">Tech Stack</h3>
+
+        <div className="space-y-6">
+          <div>
+            <h4 className="mb-3 font-semibold text-green-400">Frontend</h4>
+
+            <div className="flex flex-wrap gap-3">
+              {skills.frontend.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-gray-700 px-4 py-2 text-gray-300"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
 
           <div>
-            <p className="font-medium text-white">B.Sc Computer Science</p>
+            <h4 className="mb-3 font-semibold text-green-400">Backend</h4>
 
-            <p className="text-gray-400">Covenant University</p>
-          </div>
-        </div>
-
-        <div className="rounded-3xl border border-gray-800 p-8">
-          <h3 className="mb-6 text-2xl font-semibold text-white">Experience</h3>
-
-          <div className="space-y-6">
-            <div>
-              <p className="font-medium text-white">
-                Junior Software Developer
-              </p>
-
-              <p className="text-gray-400">Systemspecs Limited</p>
-            </div>
-
-            <div>
-              <p className="font-medium text-white">
-                Frontend Developer Intern
-              </p>
-
-              <p className="text-gray-400">Seamfix</p>
+            <div className="flex flex-wrap gap-3">
+              {skills.backend.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-gray-700 px-4 py-2 text-gray-300"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
-      <div className="mt-8 rounded-3xl border border-gray-800 p-8">
-        <h3 className="mb-6 text-2xl font-semibold text-white">
-          Core Technologies
-        </h3>
-
-        <div className="flex flex-wrap gap-4">
-          {[
-            "React",
-            "Angular",
-            "TypeScript",
-            "JavaScript",
-            "Node.js",
-            "Java",
-            "MongoDB",
-            "HTML",
-            "CSS",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-gray-700 px-4 py-2 text-gray-300"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="p-20 bg-red-500">TEST</div>
     </section>
   );
 }
