@@ -72,3 +72,24 @@ export const education = {
   degree: "B.Sc. Computer Science",
   cgpa: "4.40/5.00",
 };
+///////////////////////////////////////////////////////////////////////
+
+export const contactInfo = {
+  email: "emyugochukwu@gmail.com",
+  phone: "+2349165903960",
+  location: "Lagos, Nigeria",
+
+  github: "https://github.com/Emekaugo",
+
+  linkedin: "https://www.linkedin.com/in/chukwuemeka-ugochukwu-9a0a17370",
+
+  portfolio: "https://emeka-ugo-portfolio.netlify.app",
+};
+
+////////////////////////////////////////////////////////////////////////
+
+export const footerInfo = {
+  tagline: "Building scalable web applications and digital experiences.",
+
+  copyright: `© ${new Date().getFullYear()} Chukwuemeka Ugochukwu. All rights reserved.`,
+};
